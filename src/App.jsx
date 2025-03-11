@@ -1,30 +1,30 @@
 import { Canvas, useLoader } from "@react-three/fiber"
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
-import { OrbitControls } from '@react-three/drei'
+import { OrbitControls, ScrollControls, Scroll } from '@react-three/drei'
 import './App.css'
 import { useRef } from "react"
 import { SphereGeometry } from "three"
 
 function App() {
-	const gltf = useLoader(GLTFLoader, '../planet.glb')
-	const customCam = useRef();
-	const boundingRadius = (gltf.scene.children[0].geometry.boundingSphere.radius / 2.0)
-	console.log(boundingRadius)
-	console.log(gltf.scene.children[0])
-
+	const {nodes,materials} = useLoader(GLTFLoader, '../planet.glb')
+	console.log(nodes.Icosphere)
 	return (
 		<div id="canvas-container">
-			<Canvas camera={{ position: [-500, 0, 0], fov: 60, far: 15000 }} >
-				{/*<perspectiveCamera position={[-500, 0, 0]} fov={45} />*/}
-
-				<directionalLight color="orange" position={[-800, 20, 0]} />
-				<mesh>
-					<primitive object={gltf.scene} position={[0, 0, 0]} />
-				</mesh>
-				<mesh>
-					<sphereGeometry args={[boundingRadius, 32, 32]} />
-				</mesh>
-				<OrbitControls onEnd={(e) => { console.log(e.target.object.position) }} />
+			<Canvas camera={{ position: [-50, 0, 0], fov:45 }} >
+				<ambientLight intensity={1}/>
+				<directionalLight position={[-50,0,300]}/>
+				<ScrollControls pages={2} damping={0.1} >
+						<mesh>
+							<primitive object={nodes.Icosphere} position={[0, 0, -20]} />		
+						</mesh>
+					<mesh>
+						<boxGeometry position={[0,0,0]} />
+					</mesh>
+					<Scroll html>
+						<h1> Hey</h1>
+						<h2 style={{position:'fixed',top:'100vh'}}>I scroll</h2>
+					</Scroll>
+				</ScrollControls>
 			</Canvas>
 
 		</div>
