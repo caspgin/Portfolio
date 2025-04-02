@@ -1,18 +1,17 @@
-import Landing from "./pages/landing"
-import AboutMe from "./pages/aboutMe"
-import Contact from "./pages/contact"
-import Projects from "./pages/projects"
-import './App.css'
+import Landing from './pages/landing';
+import AboutMe from './pages/aboutMe';
+import Contact from './pages/contact';
+import Projects from './pages/projects';
+import './App.css';
 
 function App() {
-	return (
-		<div className="app">
-			<Landing/>
-			<Projects/>
-			<Contact/>
-			<AboutMe/>
-		</div>
-	)
+    return (
+        <div className="app">
+            <Landing />
+            <Projects />
+            <Contact />
+        </div>
+    );
 }
 
-export default App
+export default App;
