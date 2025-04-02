@@ -1,3 +1,6 @@
+import Crimewarbeta from './../assets/Crimewarbeta.webp';
+import textEditor from './../assets/textEditor.png';
+
 function Projects() {
     return (
         <section id="project">
@@ -16,7 +19,7 @@ function Projects() {
                             </span>
                             <div className="img">
                                 <img
-                                    src="/Crimewarbeta.webp"
+                                    src={Crimewarbeta}
                                     alt="Payday Crime War poster"
                                 />
                             </div>
@@ -28,7 +31,7 @@ function Projects() {
                             <span>A text editor in terminal.</span>
                             <div className="img">
                                 <img
-                                    src="/textEditor.png"
+                                    src={textEditor}
                                     alt="text editor start screen"
                                 />
                             </div>
