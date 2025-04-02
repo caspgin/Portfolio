@@ -16,7 +16,7 @@ function Projects() {
                             </span>
                             <div className="img">
                                 <img
-                                    src="/Crimewarbeta.webp"
+                                    src="/Portfolio/Crimewarbeta.webp"
                                     alt="Payday Crime War poster"
                                 />
                             </div>
@@ -28,7 +28,7 @@ function Projects() {
                             <span>A text editor in terminal.</span>
                             <div className="img">
                                 <img
-                                    src="/textEditor.png"
+                                    src="/Portfolio/textEditor.png"
                                     alt="text editor start screen"
                                 />
                             </div>

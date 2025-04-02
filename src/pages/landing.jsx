@@ -40,7 +40,7 @@ function Landing() {
                         fill="url(#myGradient)"
                     />
                     <image
-                        href="/bitmap-modified.png"
+                        href="/Portfolio/bitmap-modified.png"
                         width="100%"
                         height="100%"
                         clipPath="url(#custom-shape)"
