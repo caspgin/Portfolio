@@ -3,14 +3,14 @@
     "private": true,
     "version": "0.0.0",
     "type": "module",
-    "homepage": "https://caspgin.github.io/Portfoli",
+    "homepage": "https://caspgin.github.io/Portfolio",
     "scripts": {
         "dev": "vite",
         "build": "vite build",
         "lint": "eslint .",
         "preview": "vite preview",
         "predeploy": "npm run build",
-        "deploy": "gh-pages -d build"
+        "deploy": "gh-pages -d dist"
     },
     "devDependencies": {
         "@eslint/js": "^9.19.0",
