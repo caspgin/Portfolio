@@ -16,7 +16,7 @@ function Projects() {
                             </span>
                             <div className="img">
                                 <img
-                                    src="../../Crimewarbeta.webp"
+                                    src="/Crimewarbeta.webp"
                                     alt="Payday Crime War poster"
                                 />
                             </div>
@@ -28,7 +28,7 @@ function Projects() {
                             <span>A text editor in terminal.</span>
                             <div className="img">
                                 <img
-                                    src="../../textEditor.png"
+                                    src="/textEditor.png"
                                     alt="text editor start screen"
                                 />
                             </div>
@@ -87,8 +87,8 @@ function Projects() {
                                     <span>
                                         Stream line the pipeline of importing
                                         old assets such as characters, weapons
-                                        and cosmetics from S3 -> to Maya for
-                                        cleanup -> to the Unity project using
+                                        and cosmetics from S3 - to Maya for
+                                        cleanup - to the Unity project using
                                         python and C# scripting.
                                     </span>
                                 </li>

@@ -24,7 +24,7 @@ function Landing() {
                             <stop offset="22.2394%" stopColor="#f0c" />
                             <stop offset="100%" stopColor="#04f" />
                             <animate
-                                attributeName="offset"
+                                attributeName="stopColor"
                                 values=".95;.80;.60;.40;.20;0;.20;.40;.60;.80;.95"
                                 dur="2s"
                                 repeatCount="indefinite"
@@ -40,7 +40,7 @@ function Landing() {
                         fill="url(#myGradient)"
                     />
                     <image
-                        href="../../bitmap-modified.png"
+                        href="/bitmap-modified.png"
                         width="100%"
                         height="100%"
                         clipPath="url(#custom-shape)"
