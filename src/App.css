@@ -65,6 +65,10 @@
     --outfit-font: 'outfit', 'outfit swap';
 }
 
+body {
+    overflow-x: hidden;
+}
+
 body::-webkit-scrollbar {
     width: 5px;
     /* width of the entire scrollbar */
