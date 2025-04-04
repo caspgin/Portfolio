@@ -12,19 +12,16 @@ function Contact() {
     }
 
     return (
-        <section id="contact">
+        <div id="contact">
             <div className="top">
-                <h1>Get in touch!</h1>
+                <span>Get in touch!</span>
             </div>
             <div className="bottom">
-                <div className="btn">
-                    <button onClick={copyToClipboard}>{email}</button>
-                </div>
-                <div className="btn">
-                    <button onClick={linkedInButton}>linkedIn</button>
-                </div>
+                <button onClick={copyToClipboard}>{email}</button>
+                <button onClick={linkedInButton}>linkedIn</button>
+                <button onClick={linkedInButton}>github</button>
             </div>
-        </section>
+        </div>
     );
 }
 
