@@ -1,7 +1,9 @@
 import Payday from './../components/Payday_entry.jsx';
 import Terminal from './../components/Terminal_entry.jsx';
 import Coming from './../components/comingsoon_entry.jsx';
-function Projects() {
+import { forwardRef } from 'react';
+
+const Projects = () => {
     return (
         <section id="project">
             <div className="title">
@@ -16,6 +18,8 @@ function Projects() {
             </div>
         </section>
     );
-}
+};
+
+Projects.displayname = 'Projects';
 
 export default Projects;
