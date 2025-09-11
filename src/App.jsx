@@ -1,16 +1,13 @@
-import Landing from './pages/landing';
-import AboutMe from './pages/aboutMe';
-import Contact from './pages/contact';
-import Projects from './pages/projects';
 import './App.css';
+import { Landing, Experience, Contact } from './pages';
 function App() {
-    return (
-        <div className="app">
-            <Landing />
-            <Projects />
-            <Contact />
-        </div>
-    );
+	return (
+		<div className="min-h-screen flex flex-col items-center bg-black relative overflow-hidden">
+			<Landing />
+			<Experience />
+			<Contact />
+		</div>
+	);
 }
 
 export default App;
