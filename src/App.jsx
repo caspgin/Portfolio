@@ -6,7 +6,7 @@ function App() {
 			<Landing />
 			<Experience />
 			<Contact />
-		</div>
+		</div >
 	);
 }
 

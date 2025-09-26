@@ -1,7 +1,8 @@
 export const Exp = () => {
 	return (
-		<div className="w-full ml-10 p-2">
-			<div className=" ml-10  rounded-lg flex flex-col gap-1 connector ">
+		<div className="w-full ml-10 p-2 py-4 relative border-l-1 border-white">
+			<div className="absolute w-10 h-10 bg-red-100 left-[-20px] top-[20px] rounded-full "> </div>
+			<div className=" ml-10  rounded-lg flex flex-col gap-1 connector">
 				<time className="text-xs text-gray-400">
 					April 2021 - August 2022
 				</time>
@@ -55,7 +56,8 @@ export const Exp = () => {
 
 export const Edu = () => {
 	return (
-		<div className="w-full ml-10 p-2 py-4">
+		<div className="w-full ml-10 p-2 py-4 relative border-l-1 border-white">
+			<div className="absolute w-10 h-10 bg-red-100 left-[-20px] top-[20px] rounded-full "> </div>
 			<div className=" ml-10  rounded-lg flex flex-col gap-1 connector ">
 				<time className="text-xs text-gray-400">
 					September 2021 - December 2023
