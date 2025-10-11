@@ -7,6 +7,18 @@
 }
 
 @font-face {
+	font-family: bodera;
+	src: url('./assets/bodera-regular.otf') format('opentype');
+	font-display: swap;
+}
+
+@font-face {
+	font-family: moonscape;
+	src: url('./assets/Moonscape Demo.otf') format('opentype');
+	font-display: swap;
+}
+
+@font-face {
 	font-family: 'Helvetica Now Display';
 	src: url('./assets/HelveticaNowDisplay-Black.woff2') format('woff2');
 	font-weight: 900;
@@ -20,6 +32,21 @@
 	font-display: swap;
 }
 
+@font-face {
+	font-family: avrile;
+	src: url('./assets/avrile-serif.thin.otf') format('opentype');
+	font-display: swap;
+	font-weight: 100;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Nimbus-sans';
+	src: url('./assets/nimbus-sans-l.regular.otf') format('opentype');
+	font-display: swap;
+	font-weight: 100;
+	font-style: normal;
+}
 
 * {
 	box-sizing: border-box;
@@ -30,7 +57,14 @@
 	--font-dream: 'dreamFont', 'dreamFont fallback';
 	--outfit-font: 'outfit', 'outfit swap';
 	--hblack: 'Helvetica Now Display';
+	--moonscape: 'moonscape';
+	--bodera: 'bodera';
+	--avrile: 'avrile';
+	--nimbus: 'Nimbus-sans';
+}
 
+.hblack {
+	font-family: var(--hblack);
 }
 
 body {
@@ -39,23 +73,17 @@ body {
 
 body::-webkit-scrollbar {
 	width: 5px;
-	/* width of the entire scrollbar */
 }
 
 body::-webkit-scrollbar-track {
 	background: linear-gradient(rgb(28, 18, 80),
 			rgb(111, 27, 176),
 			rgb(33, 0, 46));
-	/* color of the tracking area */
 }
 
 body::-webkit-scrollbar-thumb {
 	background-color: #a895c3;
-	/* color of the scroll thumb */
 	border-radius: 25px;
-	/* roundness of the scroll thumb */
-
-	/* creates padding around scroll thumb */
 }
 
 .app {
@@ -63,17 +91,94 @@ body::-webkit-scrollbar-thumb {
 	position: relative;
 }
 
+/*landing Section*/
+
+.img-panel {
+	clip-path: polygon(0 0%, 60% 0%, 30% 80%, 0 100%);
+}
+
+.title-container {
+	font-family: var(--moonscape);
+}
+
+.title-panel {
+	clip-path: polygon(0 26%, 100% 0%, 100% 100%, 0 73%);
+}
+
+.contact-panel {
+	clip-path: polygon(30% 20%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+/*landing Section End*/
+/*education section*/
+.education-section {
+	font-family: var(--hblack);
+}
+
+.education-title-panel {
+	clip-path: polygon(0% 0%, 99% 10%, 100% 70%, 0% 100%);
+}
+
+.college-panel {
+	clip-path: polygon(0% 8%,
+			93% 0%,
+			95% 30%,
+			100% 30%,
+			98% 97%,
+			8% 100%,
+			7% 86%,
+			2% 87%);
+}
+
+.college-title-panel-wrap {
+	filter: drop-shadow(5px 5px 0 black);
+}
+
+.college-title-panel {
+	clip-path: polygon(0% 10%, 100% 0%, 97% 100%, 2% 80%);
+}
+
+.vcad-title-panel {
+	clip-path: polygon(0% 0%, 90% 10%, 97% 100%, 0% 95%);
+}
+
+.deco-wrap {
+	filter: drop-shadow(-10px 1px 0 black);
+}
+
+.deco {
+	clip-path: polygon(0% 72%, 80% 0%, 100% 50%, 12% 80%);
+}
+
+/*education section end*/
+
+.project-panel::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background-color: #a80800;
+	z-index: 1;
+	clip-path: polygon(0% 10%, 97% 10%, 100% 100%, 3% 100%);
+}
+
+.project-body {
+	font-family: var(--hblack);
+}
 
 /*Contact Section */
 .contact-title {
 	font-family: var(--font-dream);
-	font-size: 6rem;
-
 }
 
 .contact-title-back {
-
-	clip-path: polygon(0 0%, 59% 50%, 46% 80%, 100% 66%, 100% 96%, 45% 81%, 54% 57%, 0 37%);
+	clip-path: polygon(0 0%,
+			59% 50%,
+			46% 80%,
+			100% 66%,
+			100% 96%,
+			45% 81%,
+			54% 57%,
+			0 37%);
 }
 
 .grey-container {
@@ -81,10 +186,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 .wrapper {
-
 	filter: drop-shadow(-4px 4px 0 black);
 }
-
 
 .card {
 	clip-path: polygon(10% 18%, 80% 6%, 96% 50%, 30% 92%);
@@ -95,7 +198,6 @@ body::-webkit-scrollbar-thumb {
 	transform: perspective(10px) rotate(-20deg) skew(15deg);
 
 }*/
-
 
 .texting {
 	letter-spacing: 0px;
@@ -111,11 +213,6 @@ body::-webkit-scrollbar-thumb {
 		text-align: center;
 		line-height: 1.5rem;
 	}
-}
-
-.l-link-container {
-	cursor: pointer;
-	clip-path: polygon(2% 12%, 90% 6%, 96% 86%, 10% 92%);
 }
 
 .link-hover {
@@ -134,20 +231,20 @@ body::-webkit-scrollbar-thumb {
 	}
 }
 
-.e-link-container {
-	cursor: pointer;
-
-	clip-path: polygon(10% 5%, 100% 16%, 96% 86%, 1% 92%);
+.talk-panel {
+	clip-path: polygon(0% 0%, 40% 0%, 100% 100%, 0% 100%);
 }
 
-.g-link-container {
-	cursor: pointer;
-	clip-path: polygon(10% 1%, 90% 6%, 96% 100%, 10% 70%);
+.top-panel {
+	clip-path: polygon(1% 0%, 100% 0%, 100% 100%, 18% 100%);
 }
 
-.r-link-container {
-	cursor: pointer;
-	clip-path: polygon(0% 5%, 95% 6%, 80% 86%, 10% 75%);
+.middle-top-panel {
+	clip-path: polygon(1.2% 0%, 100% 0%, 100% 100%, 13.9% 100%);
+}
+
+.bottom-panel {
+	clip-path: polygon(1.3% 0%, 100% 0%, 100% 100%, 14.4% 100%);
 }
 
 /*Contact Section End*/

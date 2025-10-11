@@ -1,72 +1,70 @@
-import { useState } from "react";
-import { GithubSVG, Link, LinkedInSVG, ResumeSVG, EmailSVG } from "../components";
-
+import { useState } from 'react';
+import {
+    GithubSVG,
+    Link,
+    LinkedInSVG,
+    ResumeSVG,
+    EmailSVG,
+} from '../components';
 
 export const Contact = () => {
-	const linkedInLink =
-		'https://www.linkedin.com/in/abidali-sarangwala-2b717b127/';
-	const email = 'mailto:abi.sarangwala@gmail.com';
-	const githubLink = 'https://github.com/caspgin';
-	const resume = './resume.pdf';
-	const letters = ['A', 'B', 'i', 'D', 'a', 'L', 'I', 'S', 'A', 'r', 'A', 'N', 'G', 'w', 'A', 'L', 'A'];
+    const linkedInLink =
+        'https://www.linkedin.com/in/abidali-sarangwala-2b717b127/';
+    const email = 'mailto:abi.sarangwala@gmail.com';
+    const githubLink = 'https://github.com/caspgin';
+    const resume = './resume.pdf';
 
-	const bgLetters = ['a', 'i', 'r', 'w'];
-
-	const [rotations] = useState(() =>
-		letters.map(() => Math.floor(Math.random() * 21) - 10)
-	);
-
-	return (
-		<div id="contact" className="relative w-full p-2 mt-5">
-			<div className="text-2xl text-white relative text-center contact-title z-10">
-				<div className="title z-20 relative">
-					Let's talk!
-				</div>
-				<div className="contact-title-back h-full w-full absolute inset-0 bg-[#a80800]"></div>
-			</div>
-			<div className="card-container w-full h-[40vh] bg-[#747474]">
-				<div className="grey-container bg-[#a80800] w-full h-full">
-					<div className="wrapper w-full h-full">
-						<div className="card relative bg-white w-full h-full flex items-center justify-center">
-							<div className="text-wrapper absolute top-14 left-14 text-xl  ">
-								<div className="l-link-container absolute w-full h-full bg-black z-10" ></div>
-								<div className="link-hover absolute w-full h-full bg-[#a80800]" ></div>
-								<Link href={linkedInLink} svg={<LinkedInSVG />} linkTitle={'LinkedIn'} />
-							</div>
-							<div className="text-wrapper absolute top-19 left-55 text-sm ">
-								<div className="e-link-container absolute w-full h-full bg-black z-10" ></div>
-								<div className="link-hover absolute w-full h-full bg-[#a80800]" ></div>
-								<Link href={email} svg={<EmailSVG />} linkTitle={'Email'} />
-							</div>
-							<div className="text-wrapper absolute top-40 left-20 text-xl">
-								<div className="g-link-container absolute w-full h-full bg-black z-10" ></div>
-								<div className="link-hover absolute w-full h-full bg-[#a80800]" ></div>
-								<Link href={githubLink} svg={<GithubSVG />} linkTitle={'Github'} />
-							</div>
-							<div className="text-wrapper absolute top-28 left-40 text-sm px-1 py-1">
-								<div className="r-link-container absolute w-full h-full bg-black z-10" ></div>
-								<div className="link-hover absolute w-full h-full bg-[#a80800]" ></div>
-								<Link href={resume} svg={
-									<ResumeSVG />} linkTitle={'Resume'} />
-							</div>
-
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div className="name-container flex flex-nowrap justify-center text-[#fefc75] font-bold 
-
-				">
-				{
-					letters.map((letter, index) =>
-						<div key={index} className="letters" style={{ transform: `rotate(${rotations[index]}deg)`, backgroundColor: `${bgLetters.includes(letter) ? '#a80800' : ''}`, marginLeft: `${letter === 'S' ? '1rem' : ''}`, height: `${bgLetters.includes(letter) ? ((Math.random() * 8) + 20).toString() + 'px' : 'auto'} ` }} >{letter}</div>
-					)
-				}
-
-			</div>
-
-		</div >
-	);
-}
-
+    return (
+        <section
+            id="contact"
+            className="max-w-[1440px] w-screen h-[calc(100vh-8px)] px-[8px] py-[4px] mt-5 border-1 border-white "
+        >
+            <div className="w-full h-full relative ">
+                <div className="absolute inset-0 w-[50%] top-0 left-0 h-full ">
+                    <div className="talk-panel absolute inset-0  grid items-center px-4 ">
+                        <div
+                            className="w-full font-[moonscape] text-white 
+							*:block
+							"
+                        >
+                            <span className="w-[40%] text-[8rem] leading-[7rem]">
+                                Let's
+                            </span>
+                            <span className="w-[50%] text-[14rem] leading-[13rem]">
+                                talk,
+                            </span>
+                            <span className="w-[60%] text-[14rem] leading-[13rem]">
+                                meet
+                            </span>
+                            <span className="text-[8rem] leading-[7rem]">
+                                and
+                            </span>
+                            <span className="w-[80%] text-[16rem] leading-[15rem] ">
+                                build!
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div className="top-panel absolute inset-0 top-[15%] left-[20%] right-0 h-[30%] grid grid-cols-9 gap-x-2 text-white">
+                    <div className="bg-[#a80800] col-span-3">
+                        <Link linkTitle={'LinkedIn'} href={linkedInLink} />
+                    </div>
+                    <div className="bg-red-500 col-span-2">
+                        <div className="w-full h-full contact-panel github-panel"></div>
+                    </div>
+                    <div className="bg-orange-500 col-span-2">
+                        <div className="w-full h-full contact-panel resume-panel"></div>
+                    </div>
+                    <div className="bg-yellow-500 col-span-2">
+                        <div className="w-full h-full contact-panel resume-panel"></div>
+                    </div>
+                </div>
+                <div className="middle-top-panel absolute inset-0 top-[46%] left-[33.8%] right-0 h-[28%] "></div>
+                <div className="bottom-panel absolute inset-0 top-[65%] left-[42.5%] right-0 bottom-[10%] grid grid-cols-5 gap-x-4">
+                    <div className=" bg-green-500 col-span-3"></div>
+                    <div className="bg-yellow-500 col-span-2"></div>
+                </div>
+            </div>
+        </section>
+    );
+};
