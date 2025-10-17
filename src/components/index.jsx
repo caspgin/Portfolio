@@ -4,3 +4,4 @@ export { GithubSVG } from './GithubSVG';
 export { ResumeSVG } from './ResumeSVG';
 export { EmailSVG } from './EmailSVG';
 export { ProjectTitle } from './ProjectPage/ProjectTitle';
+export { LinkBorder } from './LinkBorder';
